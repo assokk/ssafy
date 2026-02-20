@@ -13,13 +13,13 @@ def enq(n):
         p = c//2
 
 def deq():
-    global last
-    tmp = heap[1]           # 루트 백업
+    global last             # 완전이진트리의 마지막 정점 번호
+    tmp = heap[1]           # 삭제할 루트 원소 백업
     heap[1] = heap[last]    # 삭제할 노드의 키를 루트에 복사
     last -= 1               # 마지막 노드 삭제
     p = 1                   # 루트에 옮긴 값을 자식과 비교
     c = p * 2               # 왼쪽 자식
-    while c <= last:        # 자식이 하나라도 있으면
+    while c <= last:        # 자식이 하나라도 있으면(왼쪽 자식이 있으면)
         if c+1 <= last and heap[c] < heap[c+1]: # 오른쪽 자식도 있고, 오른쪽 자식이 더 크면
             c += 1                      # 비교 대상을 오른쪽 자식으로 정함
         if heap[p] < heap[c]:   # 자식이 더 크면 최대힙 규칙에 어긋나므로
@@ -30,8 +30,8 @@ def deq():
             break               # 비교 중단,
     return tmp
 
-heap = [0] * 100
-last = 0
+heap = [0] * 100    # 최대 99개의 데이터가 인큐된다고 가정 (99번 노드까지)
+last = 0            # 완전이진트리는 1번 정점부터 있으므로 아직 노드가 없는 상태
 
 enq(2)
 enq(5)
