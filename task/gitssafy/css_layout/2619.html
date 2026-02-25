@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 자손 선택자: 부모 요소의 모든 자손 요소를 선택한다. */
+    div p {
+      color: blue;
+    }
+
+    /* 자식 선택자: 부모 요소의 직계 자식 요소만 선택한다. */
+    div > p {
+      color: crimson;
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <p>자식</p>
+    <span>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;손자</p>
+    </span>
+    <p>자식</p>
+  </div>
+</body>
+</html>

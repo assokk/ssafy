@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 1500px;
+    }
+
+    .container {
+      position: relative;
+      height: 300px;
+      width: 300px;
+      border: 1px solid black;
+    }
+
+    .box {
+      height: 100px;
+      width: 100px;
+      border: 1px solid black;
+    }
+
+    .static {
+      position: static;   /* 기본값으로, 요소는 문서 흐름에 따라 배치됩니다. top, left 등의 위치 속성이 적용되지 않습니다. */
+      background-color: lightcoral;
+    }
+
+    .absolute {
+      position: absolute;   /* 가장 가까운 position이 relative, absolute, fixed인 조상 요소를 기준으로 위치를 설정. 기준이 없으면 body 요소를 기준으로 위치가 설정됩니다. */
+      background-color: lightgreen;
+      top: 100px;
+      left: 100px;
+    }
+
+    .relative {
+      position: relative;   /* 요소를 기준으로 자식 요소의 위치를 설정할 수 있게 합니다. */
+      background-color: lightblue;
+      top: 100px;
+      left: 100px;
+    }
+
+    .fixed {
+      /* position: fixed; */    /* 브라우저 창을 기준으로 위치가 고정됩니다. 스크롤해도 위치가 변하지 않습니다. */
+      background-color: gray;
+      top: 0;
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box static">Static</div>
+    <div class="box absolute">Absolute</div>
+    <div class="box relative">Relative</div>
+    <div class="box fixed">Fixed</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      border: solid 1px black;
+      width: 300px;
+      height: 400px;
+    }
+
+    .container > * {  /* 직계 자식만 주겠다*/
+      width: 90%;
+    }
+
+    .profile-image {
+      width: 100%;
+    }
+
+    .name-tag {
+      position: absolute;
+      bottom: 0;
+      margin: 0;
+
+      width: 100%;
+      background-color: rgba(253, 193, 153, 0.7);
+
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="position: relative;">
+      <img class="profile-image" src="profile.png" alt="Profile Image">
+      <p class="name-tag">Name</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci unde officiis ad nostrum. Laboriosam mollitia similique provident fuga tenetur saepe sit, amet eaque neque eius quaerat expedita ea illum veniam.</p>
+  </div>
+</body>
+</html>

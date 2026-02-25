@@ -1,0 +1,57 @@
+CSS Layout
+
+
+
+[ 탭사이즈 2칸으로 고정하기 ]
+
+ctrl + shift + p 누르고 / >user settings 쳐서 / open user settings(JSON) 들어가서 아래 코드 붙여넣기
+'''
+"editor.detectIndentation": false,
+    "[html]": {
+        "editor.tabSize": 2
+    },
+'''
+
+
++) 단축키
+- alt + shift + F : 자동정렬
+- div * n : div가 n개 만들어짐
+- alt 누른 상태로 원하는 부분에 커서 클릭하면 복수선택됨. 한번에 수정 가능
+- ctrl + f, ctrl + shift + f : 키워드 검색 기능
+
+---
+
+
+마진 상쇄는 상하로만 발생
+
+컨텐츠 사이즈(박스 사이즈)를 정할 때
+width와 height을 설정해줄건데
+margin, border, padding, content로 이루어져있는 박스는
+사이즈를 디폴트로 content를 잡음. 근데 content 밖의 영역이 존재하기 때문에 잡은 사이즈가 해당 박스의 전체 사이즈가 되지 않을 수 있음.
+그래서 content만큼의 사이즈를 border 사이즈로 바꿔줌 (코드 종종 볼 수 있음)
+(content가 내용물이면, border는 포장지)
+
+
+
+relative는 본인이 원래 들어갔어야 할 자리를 기준점으로 삼음
+absolute는 뭔소리임?
+fixed는 바디를 기준으로 한건가? no. 그렇게 보일 순 있는데 overflow
+
+sticky는 relative로 동작하다가 overflow 설정된 부모 요소를 기준으로 이동 (없으면 body?)
+
+item을 정렬하고싶을 때 부모가 되는 칸을 flex 설정해줌
+
+justify-content는 메인축 정렬 
+align-items는 보조축 정렬
+flex-direction을 바꾸지 않으면 디폴트로 메인축이 수평, align이 수직이 됨.
+그래서 justify는 수평 정렬, align을 수직 정렬로 기본 이해하고있음.
+
+none은 자리 안먹고 안보임
+"visibility: hidden"은 자리 먹는데 안보임
+
+wrap을 썼을 때 넘치면 align-content 사용해서 정렬
+
+1.방향 
+2.wrap 
+3.wrap정렬 
+4.정렬
