@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a href="https://www.naver.com">네이버</a>
+  <a href="https://www.naver.com" target="_blank">네이버 블랭크</a>
+  <a href="https://www.naver.com" target="_blank" rel="noopener noreferrer">네이버</a>
+  <!-- rel: 피싱? -->
+
+  <div style="display: flex">  <!-- flex는 내부의 block에 적용 -->
+    안녕하세요   <!-- 근데 텍스트는 inline인데도 적용됨. 왜냐? flex로 인해 가상 block이 씌워졌기 때문-->
+    <span style="display: inline-block"></span>  <!-- 그래서 flex 안에 있는 inline을 block 처리 해주고 싶어서 inline-block 해주는건 사실상 의미가 없다 -->
+  </div>
+</body>
+</html>
