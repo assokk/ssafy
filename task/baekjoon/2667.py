@@ -29,7 +29,6 @@ for r in range(N):
             result.append(dfs(r, c))
 
 result.sort()
-
 print(len(result))
 for x in result:
     print(x)
