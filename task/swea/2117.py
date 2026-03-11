@@ -29,7 +29,7 @@ def search_K(K, cost):
 T = int(input())
 
 for tc in range(1, T+1):
-    N, M = map(int, input())
+    N, M = map(int, input().split())
     graph = [list(map(int, input().split())) for _ in range(N)]
 
     # 최소 1개 이상의 집이 존재하므로
@@ -45,7 +45,8 @@ for tc in range(1, T+1):
     for K in range(max_K, 1, -1):
         # K일 때, 커버할 수 있는 최대 집의 수를 return
         result = search_K(K, calc_cost(K))
-        if answer > 1:
+        if answer > 1:  # ??
+            answer = result
             break
 
 
@@ -77,7 +78,7 @@ def search_K(K, cost):
 T = int(input())
 
 for tc in range(1, T+1):
-    N, M = map(int, input())
+    N, M = map(int, input().split())
     graph = [list(map(int, input().split())) for _ in range(N)]
 
     answer = 1
